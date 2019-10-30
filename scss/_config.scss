@@ -1,0 +1,30 @@
+$bg_color: #444;
+$pri_color: #4169e1;
+$sec_color: #fdf666;
+$show_home_img: true;
+$home_img: url(https://wallpapercave.com/wp/wp3284854.gif);
+$bg_opacity: 0.95;
+
+@mixin ea {
+    transition: all 1s ease-out;
+}
+
+@mixin bg {
+    @if $show_home_img {
+        &#bg_img {
+            background: $home_img;
+            background-attachment: fixed;
+            background-size: cover;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                background: rgba($bg_color, $bg_opacity);
+            }
+        }
+    }
+}
