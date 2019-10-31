@@ -6,7 +6,7 @@ $home_img: url(/img/mountains_resize.png);
 $bg_opacity: 0.825;
 
 @mixin ea {
-    transition: all 2s linear;
+    transition: all 0.5s ease;
 }
 
 @mixin bg {
