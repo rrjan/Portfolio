@@ -1,7 +1,8 @@
-@import 'config';
-
+@import 'config'; // $ + @mixin
+@import 'menu';
 * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -53,9 +54,12 @@ main {
         display: inline-block;
         padding: 0.5rem;
         color: $pri_color;
+        transition: all 2s;
         &:hover {
             color: $sec_color;
             @include ea();
+            transform: rotate(360deg);
+            transition: all 2s;
         }
         }
     }
