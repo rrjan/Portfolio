@@ -8,7 +8,7 @@
 body {
     @include bg();
     background-color: $bg_color;
-    color: darkgrey;
+    color: #e0e0e0;
     height: 100vh;
     margin: 0;
     font-family: 'Fira Code', monospace;
@@ -43,6 +43,11 @@ header {
 .text_sec {
     color: $pri_color;
     font-weight: 900;
+    transition: color 1.5s;
+    &:hover {
+    color: $sec_color;
+    transition: color 1.5s;
+    }
 }
 
 main {
@@ -54,12 +59,15 @@ main {
         display: inline-block;
         padding: 0.5rem;
         color: $pri_color;
-        transition: all 2s;
+        transition: all 1.5s;
         &:hover {
             color: $sec_color;
             @include ea();
-            transform: rotate(360deg);
-            transition: all 2s;
+            // transform: rotate(1turn);
+            // transform: scale(1.25);
+            transform: translate(0, -8px) scale(1.25) rotate(1turn);
+            transition: all 1.25s;
+            // padding: 0.5r 0.5rem 0 0.5rem;
         }
         }
     }

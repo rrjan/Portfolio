@@ -1,12 +1,12 @@
-$bg_color: #444;
+$bg_color: #333;
 $pri_color: #4169e1;
 $sec_color: #fdf666;
 $show_home_img: true;
-$home_img: url(https://wallpapercave.com/wp/wp3284854.gif);
-$bg_opacity: 0.95;
+$home_img: url(/img/mountains_resize.png);
+$bg_opacity: 0.825;
 
 @mixin ea {
-    transition: all 2s ease-out;
+    transition: all 2s linear;
 }
 
 @mixin bg {
