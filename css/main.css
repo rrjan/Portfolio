@@ -102,53 +102,6 @@
 .nav_item:nth-child(4) {
   transition-delay: 1.6s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .large_hd {
-      line-height: 1.25;
-      margin-bottom: 1rem; }
-  ul.menu_nav,
-  div.menu_bran {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu_nav.show,
-    div.menu_bran.show {
-      transform: translate3d(0, 0, 0); }
-  .menu {
-    display: flex;
-    flex-flow: column-reverse wrap; }
-  .menu_nav {
-    height: 50vh;
-    transform: translate3d(384px, 0, 0);
-    font-size: 1.5rem; }
-  .menu_bran {
-    height: 50vh;
-    transform: translate3d(-384px, 0, 0); }
-    .menu_bran .bran_port {
-      width: 45vw;
-      height: 45vw; } }
-
-@media screen and (max-width: 500px) {
-  main {
-    align-items: center;
-    text-align: center;
-    line-height: 1.0; }
-    main#home {
-      padding: 3vh; }
-    main h1.large_hd {
-      font-size: 3.5rem;
-      margin-top: 10vh;
-      margin-bottom: 2.5rem; }
-    main h2.small_hd {
-      font-size: 1.75rem;
-      margin-bottom: 2.5rem;
-      line-height: 1.2; }
-    main .menu_nav {
-      font-size: 0.75rem; } }
-
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased; }
@@ -218,3 +171,50 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .large_hd {
+      line-height: 1.25;
+      margin-bottom: 1rem; }
+  ul.menu_nav,
+  div.menu_bran {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu_nav.show,
+    div.menu_bran.show {
+      transform: translate3d(0, 0, 0); }
+  .menu {
+    display: flex;
+    flex-flow: column-reverse wrap; }
+  .menu_nav {
+    height: 50vh;
+    transform: translate3d(384px, 0, 0);
+    font-size: 1.5rem; }
+  .menu_bran {
+    height: 50vh;
+    transform: translate3d(-384px, 0, 0); }
+    .menu_bran .bran_port {
+      width: 45vw;
+      height: 45vw; } }
+
+@media screen and (max-width: 500px) {
+  main {
+    align-items: center;
+    text-align: center;
+    line-height: 1.0; }
+    main#home {
+      padding: 3vh; }
+    main h1.large_hd {
+      font-size: 3.5rem;
+      margin-top: 10vh;
+      margin-bottom: 2.5rem; }
+    main h2.small_hd {
+      font-size: 1.75rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.2; }
+    main .menu_nav {
+      font-size: 0.75rem; } }
