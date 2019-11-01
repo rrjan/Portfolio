@@ -1,5 +1,7 @@
 @import 'config'; // $ + @mixin
-@import 'menu'; // ham_btn + menu + menu_nav
+@import 'menu'; // menu overlay
+@import 'media'; // media
+
 * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -8,25 +10,25 @@
 body {
     @include bg;
     background-color: $bg_color;
-    color: #e0e0e0;
+    color: $txt_color;
     height: 100vh;
     margin: 0;
     font-family: 'Fira Code', monospace;
-    line-height: 1.65;
+    line-height: 1.5;
 }
 
 // HEADING
 
 h1,h2,h3 {
     margin: 0;
-    font-weight: 500;
     &.large_hd {
-        font-size: 4rem;
+        font-size: 5rem;
         font-weight: 700;
     }
     &.small_hd {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -43,7 +45,7 @@ header {
 .text_sec {
     color: $pri_color;
     font-weight: 900;
-    transition: color 1.5s;
+    @include ea;
     &:hover {
     color: $sec_color;
     }
@@ -53,10 +55,10 @@ main {
     padding: 5rem;
     height: 100%;
     .icons {
-        margin: 1rem;
+        margin: 0.35rem;
         a {
         display: inline-block;
-        padding: 0.5rem;
+        padding: 0.25rem;
         color: $pri_color;
         transition: all 1.25s;
         &:hover {

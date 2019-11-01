@@ -3,6 +3,7 @@ const ham_btn = document.querySelector('.ham_btn');
 const menu = document.querySelector('.menu');
 const menu_nav = document.querySelector('.menu_nav');
 const menu_bran = document.querySelector('.menu_bran');
+const bran_port = document.querySelector('.bran_port');
 const menu_item = document.querySelectorAll('.nav_item');
 
 // 
@@ -15,6 +16,7 @@ function toggle_menu() {
         menu.classList.add('show');
         menu_nav.classList.add('show');
         menu_bran.classList.add('show');
+        bran_port.classList.add('show');
         menu_item.forEach(item => item.classList.add('show'));
         show_menu = true;
     }
@@ -23,6 +25,7 @@ function toggle_menu() {
         menu.classList.remove('show');
         menu_nav.classList.remove('show');
         menu_bran.classList.remove('show');
+        bran_port.classList.remove('show');
         menu_item.forEach(item => item.classList.remove('show'));
         show_menu = false;
     }

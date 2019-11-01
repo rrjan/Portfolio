@@ -38,7 +38,7 @@
     position: fixed;
     visibility: hidden;
     top: 0;
-    // opacity: 0.9;
+    text-align: center;
     width: 100%;
     &.show {
         visibility: visible;
@@ -58,8 +58,8 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        background: darken($bg_color, 3);
-        transform: translate3d(100%, 100%, 0);
+        transform: translate3d(100%, 0, 0);
+        background: $bg_color;
         @include ea;
         &.show {
             transform: translate3d(0, 0, 0);
@@ -70,8 +70,8 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        background: darken($bg_color, 3);
-        transform: translate3d(-100%, -100%, 0);
+        transform: translate3d(-100%, 0, 0);
+        background: $bg_color;
         @include ea;
         &.show {
             transform: translate3d(0, 0, 0);
@@ -80,26 +80,34 @@
         .bran_port {
             background: url('/img/jn.png');
             background-size: cover;
-            opacity: 1;
             width: 35vh;
             height: 35vh;
             border-radius: 35%;
             border: solid 5px $pri_color;
+            transform: translate3d(-650px, 0, 0);
+            @include ea;
+            &.show {
+                // Slide in from right
+                transform: translate3d(0, 0, 0);
+                transition-delay: 2.75s;
+            }
         }
     }
     .nav_item {
-        transform: translate3d(600px, 0, 0);
+        transform: translate3d(650px, 0, 0);
         @include ea;
-
         &.show {
             // Slide in from right
             transform: translate3d(0, 0, 0);
+        }
+        &.curr > a {
+            color: $sec_color;
         }
     }
     .nav_link {
         display: inline-block;
         position: relative;
-        font-size: 30px;
+        font-size: 2rem;
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300;
@@ -113,6 +121,6 @@
 
 @for $x from 1 through 4 {
     .nav_item:nth-child(#{$x}) {
-        transition-delay: $x * 0.25s;
+        transition-delay: $x * 0.4s;
     }
 }
