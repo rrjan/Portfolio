@@ -1,24 +1,18 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-<<<<<<< ours
   "description": "rwd portfolio with sass pro_1",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
-=======
-  "description": "rwd portfolio",
-  "main": "index.js",
-  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",  
     "deploy": "gh-pages -d",
     "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> theirs
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rrjan/portfolio.git"
   },
-  "author": "rrjan",
+  "author": "Radosław Janowski",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rrjan/portfolio/issues"
