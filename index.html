@@ -8,6 +8,40 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code|Fira+Mono|Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <script>
+    // wybór elem. DOM
+const ham_btn = document.querySelector('.ham_btn');
+const menu = document.querySelector('.menu');
+const menu_nav = document.querySelector('.menu_nav');
+const menu_bran = document.querySelector('.menu_bran');
+const bran_port = document.querySelector('.bran_port');
+const menu_item = document.querySelectorAll('.nav_item');
+
+// 
+let show_menu = false;
+ham_btn.addEventListener('click', toggle_menu);
+
+function toggle_menu() {
+    if(!show_menu) {
+        ham_btn.classList.add('close');
+        menu.classList.add('show');
+        menu_nav.classList.add('show');
+        menu_bran.classList.add('show');
+        bran_port.classList.add('show');
+        menu_item.forEach(item => item.classList.add('show'));
+        show_menu = true;
+    }
+    else {
+        ham_btn.classList.remove('close');
+        menu.classList.remove('show');
+        menu_nav.classList.remove('show');
+        menu_bran.classList.remove('show');
+        bran_port.classList.remove('show');
+        menu_item.forEach(item => item.classList.remove('show'));
+        show_menu = false;
+    }
+}
+    </script>
 </head>
 <body id="bg_img">
     <header>
@@ -51,39 +85,6 @@
             <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
         </div>
     </main>
-    <script>
-    // wybór elem. DOM
-const ham_btn = document.querySelector('.ham_btn');
-const menu = document.querySelector('.menu');
-const menu_nav = document.querySelector('.menu_nav');
-const menu_bran = document.querySelector('.menu_bran');
-const bran_port = document.querySelector('.bran_port');
-const menu_item = document.querySelectorAll('.nav_item');
-
-// 
-let show_menu = false;
-ham_btn.addEventListener('click', toggle_menu);
-
-function toggle_menu() {
-    if(!show_menu) {
-        ham_btn.classList.add('close');
-        menu.classList.add('show');
-        menu_nav.classList.add('show');
-        menu_bran.classList.add('show');
-        bran_port.classList.add('show');
-        menu_item.forEach(item => item.classList.add('show'));
-        show_menu = true;
-    }
-    else {
-        ham_btn.classList.remove('close');
-        menu.classList.remove('show');
-        menu_nav.classList.remove('show');
-        menu_bran.classList.remove('show');
-        bran_port.classList.remove('show');
-        menu_item.forEach(item => item.classList.remove('show'));
-        show_menu = false;
-    }
-}
-    </script>
+    
 </body>
 </html>
