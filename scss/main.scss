@@ -1,6 +1,5 @@
 @import 'config'; // $ + @mixin
 @import 'menu'; // menu overlay
-@import 'media'; // media
 
 * {
     box-sizing: border-box;
@@ -76,3 +75,5 @@ main {
         }
     }
 }
+
+@import 'media'; // media
