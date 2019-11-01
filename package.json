@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rrjan/portfolio/issues"
   },
-  "homepage": "https://github.com/rrjan/portfolio#readme"
+  "homepage": "https://github.com/rrjan/portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
 }
