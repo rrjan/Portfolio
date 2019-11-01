@@ -1,0 +1,78 @@
+@import 'config'; // $ + @mixin
+@import 'menu'; // menu overlay
+@import 'media'; // media
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    @include bg;
+    background-color: $bg_color;
+    color: $txt_color;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.5;
+}
+
+// HEADING
+
+h1,h2,h3 {
+    margin: 0;
+    &.large_hd {
+        font-size: 5rem;
+        font-weight: 700;
+    }
+    &.small_hd {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $pri_color;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+}
+
+.text_sec {
+    color: $pri_color;
+    font-weight: 900;
+    @include ea;
+    &:hover {
+    color: $sec_color;
+    }
+}
+
+main {
+    padding: 5rem;
+    height: 100%;
+    .icons {
+        margin: 0.35rem;
+        a {
+        display: inline-block;
+        padding: 0.25rem;
+        color: $pri_color;
+        transition: all 1.25s;
+        &:hover {
+            color: $sec_color;
+            @include ea();
+            transform: translate(0, -8px) scale(1.25);
+            transition: all 0.75s;
+        }
+        }
+    }
+    &#home {
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}

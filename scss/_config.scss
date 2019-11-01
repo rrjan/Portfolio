@@ -1,0 +1,60 @@
+// variables
+$bg_color: #121E40;
+$pri_color: #4169e1;
+$sec_color: #ffff69;
+$txt_color: #bfbfbf;
+$show_home_img: true;
+$bg_img: url(/img/mountains_resize.png);
+$bg_opacity: 0.9;
+
+// ?ease-out
+@mixin ea {
+    transition: all 0.5s ease-out;
+}
+
+// background
+@mixin bg {
+    @if $show_home_img {
+        &#bg_img {
+            background: $bg_img;
+            background-attachment: fixed;
+            background-size: cover;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                background: rgba($bg_color, $bg_opacity);
+            }
+        }
+    }
+}
+
+// media
+
+@mixin small {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin xlarge {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "rwd portfolio with sass pro_1",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrjan/portfolio.git"
+  },
+  "author": "rrjan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rrjan/portfolio/issues"
+  },
+  "homepage": "https://github.com/rrjan/portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
