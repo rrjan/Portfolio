@@ -1,4 +1,3 @@
-// wybór elem. DOM
 const ham_btn = document.querySelector('.ham_btn');
 const menu = document.querySelector('.menu');
 const menu_nav = document.querySelector('.menu_nav');
@@ -6,7 +5,6 @@ const menu_bran = document.querySelector('.menu_bran');
 const bran_port = document.querySelector('.bran_port');
 const menu_item = document.querySelectorAll('.nav_item');
 
-// 
 let show_menu = false;
 ham_btn.addEventListener('click', toggle_menu);
 
