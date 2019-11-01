@@ -4,7 +4,7 @@
   "description": "rwd portfolio with sass pro_1",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",  
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/rrjan/portfolio/issues"
   },
-  "homepage": "https://github.com/rrjan/portfolio#readme",
+  "homepage": "https://github.com/rrjan/portfolio",
   "dependencies": {
     "node-sass": "^4.13.0"
   }
