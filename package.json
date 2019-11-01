@@ -6,7 +6,7 @@
   "homepage": "https://rrjan.github.io/portfolio/"
   "scripts": {
     "sass": "node-sass -w scss/ -o css/ --recursive",
-    "deploy": "gh-pages -d"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/rrjan/portfolio#readme",
   "dependencies": {
-    "gh-pages": "^2.1.1",
-    "node-sass": "^4.13.0"
+    "gh-pages": "2.1.1",
+    "node-sass": "4.13.0"
   }
 }
