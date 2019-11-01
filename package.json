@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +17,9 @@
   "bugs": {
     "url": "https://github.com/rrjan/portfolio/issues"
   },
-  "homepage": "https://github.com/rrjan/portfolio",
+  "homepage": "https://rrjan.github.io/portfolio/",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0"
   }
 }
