@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "rwd portfolio",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrjan/portfolio.git"
+  },
+  "author": "rrjan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rrjan/portfolio/issues"
+  },
+  "homepage": "https://github.com/rrjan/portfolio#readme"
+}
