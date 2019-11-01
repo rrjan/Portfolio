@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "rwd portfolio with sass pro_1",
   "main": "index.js",
+  "homepage": "https://rrjan.github.io/portfolio/"
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive"
+    "sass": "node-sass -w scss/ -o css/ --recursive",
+    "deploy": "gh-pages -d"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rrjan/portfolio.git"
+    "url": "git+https://github.com/rrjan/portfolio.git",
   },
   "author": "rrjan",
   "license": "MIT",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/rrjan/portfolio#readme",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0"
   }
 }
