@@ -60,7 +60,7 @@
       transform: translate3d(0, 0, 0);
       transition: all 0.75s; }
     .menu_bran .bran_port {
-      background: url("/img/jn.png");
+      background: url("../img/jn.png");
       background-size: cover;
       width: 35vh;
       height: 35vh;
@@ -114,7 +114,7 @@ body {
   font-family: 'Fira Code', monospace;
   line-height: 1.5; }
   body#bg_img {
-    background: url(/img/mountains_resize.png);
+    background: url(../img/mountains_resize.png);
     background-attachment: fixed;
     background-size: cover; }
     body#bg_img:after {
