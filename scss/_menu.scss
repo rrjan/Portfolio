@@ -1,8 +1,8 @@
 .ham_btn {
-    position: fixed;
+    position: absolute;
     z-index: 3;
-    right: 50px;
-    top: 50px;
+    right: 20px;
+    top: 20px;
     cursor: pointer;
     @include ea();
     .btn_line {
@@ -14,6 +14,7 @@
     }
     // rotate X
     &.close {
+        top: 10px;
         transform: rotate(180deg);
         .btn_line {
             background: #ff0000;
@@ -35,10 +36,10 @@
 
 // menu overlay
 .menu {
+    z-index: 2;
     position: fixed;
     visibility: hidden;
     top: 0;
-    text-align: center;
     width: 100%;
     &.show {
         visibility: visible;
@@ -50,11 +51,12 @@
         align-content: center;
         justify-content: center;
         float: left;
-        width: 50vw;
+        width: 50%;
         height: 100vh;
         overflow: hidden;
     }
     &_nav {
+        text-align: center;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -63,7 +65,7 @@
         @include ea;
         &.show {
             transform: translate3d(0, 0, 0);
-            transition: all 0.75s;
+            transition: all 0.4s;
         }
     }
     &_bran {
@@ -75,26 +77,26 @@
         @include ea;
         &.show {
             transform: translate3d(0, 0, 0);
-            transition: all 0.75s;
+            transition: all 0.4s;
         }
         .bran_port {
             background: url('../img/jn.png');
             background-size: cover;
-            width: 35vh;
-            height: 35vh;
-            border-radius: 35%;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
             border: solid 5px $pri_color;
-            transform: translate3d(-650px, 0, 0);
+            transform: translate3d(-750px, 0, 0);
             @include ea;
             &.show {
                 // Slide in from right
                 transform: translate3d(0, 0, 0);
-                transition-delay: 2.75s;
+                transition-delay: 1.25s;
             }
         }
     }
     .nav_item {
-        transform: translate3d(650px, 0, 0);
+        transform: translate3d(750px, 0, 0);
         @include ea;
         &.show {
             // Slide in from right
@@ -109,18 +111,20 @@
         position: relative;
         font-size: 2rem;
         text-transform: uppercase;
-        padding: 1rem 0;
+        padding: 1rem;
         font-weight: 300;
         text-decoration: none;
         @include ea;
         &:hover {
             color: $sec_color;
-        }
+            transform: scale3d(1.25, 1.25, 1.25);
+            }
     }
 }
 
+// opóźnienie menu
 @for $x from 1 through 4 {
     .nav_item:nth-child(#{$x}) {
-        transition-delay: $x * 0.4s;
+        transition-delay: $x * 0.1s;
     }
 }

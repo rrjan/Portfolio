@@ -1,5 +1,5 @@
-@import 'config'; // $ + @mixin
-@import 'menu'; // menu overlay
+@import 'config'; // _config.scss $ + @mixin
+@import 'menu'; // _menu menu overlay
 
 * {
     box-sizing: border-box;
@@ -14,6 +14,7 @@ body {
     margin: 0;
     font-family: 'Fira Code', monospace;
     line-height: 1.5;
+    // overflow: hidden;
 }
 
 // HEADING
@@ -37,8 +38,9 @@ a {
 }
 
 header {
-    position: fixed;
+    // position: fixed;
     z-index: 2;
+    width: 100%;
 }
 
 .text_sec {
@@ -51,8 +53,8 @@ header {
 }
 
 main {
-    padding: 5rem;
-    height: 100%;
+    padding: 3rem;
+    min-height: calc(100vh - 50px);
     .icons {
         margin: 0.35rem;
         a {
@@ -68,12 +70,198 @@ main {
         }
         }
     }
-    &#home {
-        overflow: hidden;
-        h1 {
-            margin-top: 20vh;
+}
+
+#home {
+    // overflow: hidden;
+    h1 {
+        margin-top: 15vh;
+    }
+}
+
+// about_me.html
+.about_info {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-areas:
+        'bio_img bio bio'
+        'job_1 job_2 job_3';
+    grid-template-columns: repeat(3, 1fr);
+    .bio_img {
+        grid-area: bio_img;
+        margin: auto;
+        border-radius: 50%;
+        border: $pri_color 5px solid;
+        opacity: 0.75;
+        @include ea;
+        &:hover {
+            border: solid 5px $sec_color;
+        }
+    }
+    
+    .bio {
+        text-align: left;
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+    
+    .job_1 {
+        grid-area: job_1;
+    }
+    
+    .job_2 {
+        grid-area: job_2;
+    }
+    
+    .job_3 {
+        grid-area: job_3;
+    }
+    
+    .job {
+        text-align: left;
+        background: darken($bg_color, 3);
+        opacity: 0.75;
+        border-bottom: $pri_color 3px solid;
+        @include ea;
+        &:hover {
+            border-bottom: $sec_color 3px solid;
+        }
+        h3 {
+            font-size: 1.25rem;
+            background: lighten($bg_color, 2);
+            border: darken($pri_color, 5) 5px double;
+            border-width: 1px;
+            margin: 10px;
+            padding: 10px;
+            line-height: 1.25;
+        }
+    
+        h6 {
+            margin: 15px 30px;
+            text-align: right;
+            color: darken($txt_color, 10);
+        }
+        P {
+            margin: 10px;
+            font-size: 1.15rem;
+            line-height: 1.25;
         }
     }
 }
 
-@import 'media'; // media
+#about_me {
+    padding-bottom: 1rem;
+}
+// my_work.html
+.my_work {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    grid-row-gap: 2rem;
+    .work_img {
+        width: 100%;
+        border: $pri_color 3px solid;
+        margin-bottom: 0.25rem;
+        opacity: 0.5;
+        @include ea;
+        &:hover {
+            opacity: 1;
+            border: $sec_color 3px solid;
+        }
+    }
+    .work_pre {
+        display: block;
+        padding: 0.25rem 1rem;
+        margin-bottom: 0.25rem;
+        background: darken($bg_color, 5);
+        text-align: center;
+        @include ea;
+        &:hover {
+            color: $sec_color; 
+        }
+    }
+}
+
+// contact.html
+.contact {
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    .form {
+        width: 75%;
+        position: relative;
+        height: 50px;
+        .textarea {
+            height: 250px;
+        }
+        // overflow: hidden;
+        .input {
+            width: 100%;
+            height: 100%;
+            color: $pri_color;
+            padding-top: 25px;
+            border: none;
+            background: none;
+            font-size: 2rem;
+            outline: none;
+        }
+        .name_lab {
+            font-size: 1.5rem;
+            color: $pri_color;
+            position: absolute;
+            bottom: -5px;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            // background: none;
+            pointer-events: none;
+            border-bottom: $pri_color 1px solid;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0px;
+                bottom: -1px;
+                width: 100%;
+                height: 100%;
+                border-bottom: $sec_color 3px solid;
+                transform: translateX(-200%);
+                @include ea;
+                }
+            }
+            .name_cont {
+                position: absolute;
+                bottom: 3px;
+                left: 0px;
+                @include ea;
+            }
+        }
+         // focus? 
+        .input:focus + .name_lab .name_cont,
+        .input:valid + .name_lab .name_cont{
+            transform: translateY(-85%);
+            color: $pri_color;
+        }
+        .textarea:focus + .name_lab .name_cont,
+        .textarea:valid + .name_lab .name_cont{
+            transform: translateY(-450%);
+            color: $pri_color;
+        }
+        .input:focus + .name_lab::after,
+        .input:valid + .name_lab::after {
+            transform: translateX(0%);
+            @include ea;
+        }
+    }
+
+// footer
+#foot {
+    height: 50px;
+    padding: 1rem;
+    text-align: center;
+    background: darken($bg_color, 5);
+    color: darken($txt_color, 10);
+}
+
+@import 'media'; // _media.scss @media

@@ -4,9 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CONTACT</title>
+    <title>John Doe Resume</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Fira+Mono|Fira+Sans|Fira+Sans+Condensed|Fira+Sans+Extra+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
 </head>
-<body>
-    
+<body id="bg_img">
+    <header>
+        <div class="ham_btn">
+            <div class="btn_line"></div>
+            <div class="btn_line"></div>
+            <div class="btn_line"></div>
+        </div>
+
+        <nav class="menu">
+            <div class="menu_bran">
+                <div class="bran_port"></div>
+            </div>
+            <ul class="menu_nav">
+                <li class="nav_item">
+                    <a href="index.html" class="nav_link">home</a>
+                </li>
+                <li class="nav_item">
+                    <a href="about_me.html" class="nav_link">about me</a>
+                </li>
+                <li class="nav_item">
+                    <a href="my_work.html" class="nav_link">my work</a>
+                </li>
+                <li class="nav_item curr">
+                    <a href="contact.html" class="nav_link">contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contact">
+        <h1 class="large_hd">
+            <span class="text_sec">Contact</span>
+        </h1>
+        <!-- <h2 class="small_hd">
+            Lorem ipsum dolor sit amet.
+        </h2> -->
+        <div class="contact">
+            <div class="form">
+                <input class="input" type="text" name="" required autocomplete="off" >
+                <label for="name" class="name_lab">
+                    <span class="name_cont">name</span>
+                </label>
+            </div>
+            <div class="form">
+                    <input class="input" type="text" name="" required autocomplete="off" >
+                    <label for="surname" class="name_lab">
+                        <span class="name_cont">surmame</span>
+                    </label>
+            </div>
+            <div class="form">
+                    <input class="input" type="email" name="" required autocomplete="off" >
+                    <label for="email" class="name_lab">
+                        <span class="name_cont">e-mail</span>
+                    </label>
+            </div>
+            <div class="form">
+                    <input class="input" type="tel" name="" required autocomplete="off" >
+                    <label for="tel" class="name_lab">
+                        <span class="name_cont">phone number</span>
+                    </label>
+            </div>
+            <div class="form" style="height: 200px;">
+                    <textarea name="" class="input textarea" cols="30" rows="5" required autocomplete="off"></textarea>
+                    <label for="message" class="name_lab">
+                        <span class="name_cont">message</span>
+                    </label>
+            </div>
+            
+        </div>
+    </main>
+    <footer id="foot">
+        &copy; 2019
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

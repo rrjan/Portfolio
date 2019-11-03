@@ -3,11 +3,21 @@
 }
 
 @include large {
+    body {
+        overflow: visible;
+    }
+    .my_work {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }
 
 @include medium {
+    body {
+        overflow: visible;
+    }
     main {
+        padding: 2rem;
         align-items: center;
         text-align: center;
         .large_hd {
@@ -15,10 +25,10 @@
             margin-bottom: 1rem;
         }
     }
-    ul.menu_nav,
-    div.menu_bran {
+    .menu_nav,
+    .menu_bran {
         float: none;
-        width: 100%;
+        width: 100vw;
         min-height: 0;
         &.show {
             transform: translate3d(0, 0, 0);
@@ -29,24 +39,44 @@
         flex-flow: column-reverse wrap;
     }
     .menu_nav {
-        height: 50vh;
-        transform: translate3d(384px, 0, 0);
-        font-size: 1.5rem;
+        height: 60vh;
+        transform: translate3d(100%, 0, 0);
+    }
+    .menu_link {
+        padding: 0.75rem;
+        font-size: 1.75rem;
     }
     .menu_bran {
-        height: 50vh;
-        transform: translate3d(-384px, 0, 0);
-        .bran_port {
-            width: 45vw;
-            height: 45vw;
-        }
+        height: 40vh;
+        transform: translate3d(-100%, 0, 0);
+    }
+    .bran_port {
+        height: 150px;
+        width: 150px;
+    }
+    .about_info {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'bio_img'
+        'bio'
+        'job_1'
+        'job_2'
+        'job_3';
+    }
+    .bran_port.show {
+        height: 250px;
+        width: 250px
+    }
+    .my_work {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @include small {
     main {
+        padding: 1rem;
         &#home {
-            padding: 3vh;
+            padding: 1rem;
         }
         align-items: center;
         text-align: center;
@@ -61,8 +91,27 @@
             margin-bottom: 2.5rem;
             line-height: 1.2;
         }
-        .menu_nav {
-            font-size: 0.75rem;
+        .menu {
+            .menu_link {
+                padding: 0.5rem;
+                font-size: 1rem;
+            }
+        }
+    }
+    .menu .nav_link {
+        font-size: 1.75rem;
+    }
+    .bran_port.show {
+        height: 150px;
+        width: 150px
+    }
+    .my_work {
+        grid-template-columns: 1fr;
+    }
+    #home {
+        // overflow: hidden;
+        h1 {
+            margin-top: 15vh;
         }
     }
 }
